@@ -19,10 +19,12 @@ html {
 }
 
 :root {
-    --main-color: #19283f;
-    --secound-color: #eff7fa;
+    --main-color: #2196f3;
+    --secound-color: #00bcd4;
+    --back-color: #fbfdfe;
     --main-padding: 80px;
     --main-transition: .4s;
+    
 }
 
 body {
@@ -52,3 +54,87 @@ ul {
 /*********************************************************************
 ************************** Style to project **************************
 *********************************************************************/
+
+
+/*########################### Start style navbar ##########################*/
+
+.navbar {
+    border-bottom: 2px solid #eee
+}
+
+.navbar .navbar-brand img {
+    width: 80px;
+}
+
+.navbar .navbar-toggler {
+    font-size: 26px;
+    border: none;
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.navbar .navbar-nav li a {
+    font-size: 20px;
+    position: relative;
+    z-index: 1;
+    transition: color var(--main-transition)
+}
+
+.navbar .navbar-nav li a::before {
+    content: "";
+    width: 0;
+    height: 4px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: width var(--main-transition)
+}
+
+.navbar .navbar-nav li a::after {
+    content: "";
+    width: 0;
+    height: 100%;
+    background-color: var(--back-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: width var(--main-transition)
+}
+
+.navbar .navbar-nav li a.active {
+    color: var(--main-color);
+}
+
+.navbar .navbar-nav li a:hover:not(.active) {
+    color: var(--secound-color)
+}
+
+.navbar .navbar-nav li a:hover:not(.active)::before,
+.navbar .navbar-nav li a:hover:not(.active)::after {
+    width: 100%;
+}
+
+@media (max-width: 991px) {
+
+    .navbar {
+        border: none;
+    }
+
+    .navbar .navbar-nav {
+        margin-top: 25px
+    }
+
+    .navbar .navbar-nav li a::before,
+    .navbar .navbar-nav li a::after {
+        display: none;
+    }
+
+    .navbar .navbar-nav li:not(:first-of-type) a {
+        border-top: 1px solid #eee
+    }
+}
+/*########################### Start style navbar ##########################*/
