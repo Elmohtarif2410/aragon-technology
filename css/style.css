@@ -1,0 +1,54 @@
+/*
+    Template: Aragon Technology
+    made by : Ahmed Elmohtarif
+    website : https://elmohtarif2410.github.io/My-portofolio
+    deat finsh : it's not finsh
+*/
+
+/*********************************************************************
+************************* Style Global Rouls *************************
+*********************************************************************/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+:root {
+    --main-color: #19283f;
+    --secound-color: #eff7fa;
+    --main-padding: 80px;
+    --main-transition: .4s;
+}
+
+body {
+    font-family: "Tajawal", sans-serif, Tahoma, Geneva, Verdana;
+}
+
+button {
+    background: none
+}
+
+button:focus {
+    outline: none
+}
+
+ul {
+    list-style: none
+}
+
+/********************** End Style Global Rouls ***********************/
+
+/********************** Start Style compotant ***********************/
+
+
+
+/********************** End Style compotant ***********************/
+
+/*********************************************************************
+************************** Style to project **************************
+*********************************************************************/
