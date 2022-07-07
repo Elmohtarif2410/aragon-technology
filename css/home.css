@@ -4,7 +4,9 @@
     --back-color: #fbfdfe;
     --main-padding: 80px;
     --main-transition: .4s;
-    
+    --text-color: #777;
+    --heading-color: #586567;
+    --main-gap: 40px
 }
 
 .main-button {
@@ -114,3 +116,52 @@
 }
 
 /************************* End Style Landding ************************/
+
+/************************* Start Style About Us ************************/
+
+.about-us {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.about-us .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: var(--main-gap)
+}
+
+.about-us article .icon {
+    margin: auto;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    font-size: 3rem;
+    background-color: #eee;
+    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us article h3 {
+    font-size: 2rem;
+    margin: 25px 0;
+    color: var(--heading-color)
+}
+
+.about-us article p {
+    line-height: 1.7;
+    color: var(--text-color)
+}
+
+
+@media (max-width: 575px) {
+    
+    .about-us .container {
+        grid-template-columns: auto;
+    }
+
+}
+
+/************************* End Style About Us  ************************/
+
