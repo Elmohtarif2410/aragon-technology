@@ -28,6 +28,7 @@
 
 .landding {
     height: calc(100vh - 88px);
+    min-height: 650px;
 }
 
 .landding .carousel-indicators button {
