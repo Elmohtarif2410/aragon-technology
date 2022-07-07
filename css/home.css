@@ -210,3 +210,72 @@
 
 /************************* End Style About Us  ************************/
 
+/************************* Start Style Services ************************/
+
+.services {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    position: relative;
+    /* background-color: var(--back-color); */
+}
+
+.services::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--back-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: skewY(4deg);
+}
+
+.services .row section {
+    padding-left: 6px;
+    padding-right: 6px;
+}
+
+.services .row .card {
+    box-shadow: 0 0 15px rgb(0 0 0 / .1);
+    transition: var(--main-transition);
+}
+
+.services .card:hover {
+    transform: translateY(-25px);
+    box-shadow: 0 0 15px rgb(0 0 0 / .3);
+}
+
+.services .card:hover .info svg {
+    animation: arrow .7s ease-in-out infinite;
+}
+
+.services .card h3 {
+    font-size: 22px;
+    color: var(--heading-color);
+    margin-bottom: 15px;
+}
+
+.services .card .info {
+    padding-top: 15px;
+    border-top: 1px solid #e6e6e7;
+    color: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+}
+
+.services .card .info a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+/* Anmation */
+@keyframes arrow {
+    from {
+        transform: translateX(10px);
+    }
+}
+
+/************************* Start Style Services ************************/
