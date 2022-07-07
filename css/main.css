@@ -24,7 +24,9 @@ html {
     --back-color: #fbfdfe;
     --main-padding: 80px;
     --main-transition: .4s;
-    
+    --text-color: #777;
+    --heading-color: #586567;
+    --main-gap: 40px
 }
 
 body {
@@ -43,6 +45,10 @@ ul {
     list-style: none
 }
 
+p {
+    line-height: 1.7;
+    color: var(--text-color)
+}
 /********************** End Style Global Rouls ***********************/
 
 /********************** Start Style compotant ***********************/
