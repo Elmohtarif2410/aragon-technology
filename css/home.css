@@ -1,0 +1,115 @@
+:root {
+    --main-color: #2196f3;
+    --secound-color: #00bcd4;
+    --back-color: #fbfdfe;
+    --main-padding: 80px;
+    --main-transition: .4s;
+    
+}
+
+.main-button {
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    outline: none;
+    padding: 12px 25px;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.main-button:hover {
+    background-color: var(--secound-color);
+    color:rgb(250 250 250 / .8)
+}
+
+/************************* Start Style Landding ************************/
+
+.landding {
+    height: calc(100vh - 88px);
+}
+
+.landding .carousel-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: var(--back-color) !important;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.landding .carousel-indicators button.active {
+    background-color: white;
+}
+
+/* So that the images take the height of the page, regardless of the dimensions, taking into account responsive */
+.landding .carousel,
+.landding .carousel .carousel-inner,
+.landding .carousel .carousel-inner .carousel-item,
+.landding .carousel .carousel-inner .carousel-item img {
+    height: 100%;
+}
+
+.landding .carousel .carousel-inner .carousel-item::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / .6);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.landding .carousel .carousel-item img {
+    object-fit: cover;
+} 
+
+.landding .carousel .carousel-item .carousel-caption {
+    top: 50%;
+    left: 50%;
+    right: auto;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landding .carousel .carousel-caption h2 {
+    font-size: 3rem;
+    color: white;
+}
+
+.landding .carousel .carousel-caption p {
+    color: rgb(250 250 250 / .5);
+    font-size: 18px;
+    margin: 30px 0
+}
+
+.landding .carousel .carousel-caption button {
+    width: fit-content;
+}
+
+.landding .carousel .control span {
+    width: 2.6rem;
+    height: 2.6rem;
+    filter: none;
+}
+
+@media (max-width: 991px) {
+    .landding {
+        height: calc(100vh - 86px);
+    }
+}
+
+@media (max-width: 767px) {
+    
+    .landding .carousel .carousel-caption h2 {font-size: 2rem}
+
+    .landding .carousel .carousel-caption p {font-size: 1rem}
+
+}
+
+/************************* End Style Landding ************************/

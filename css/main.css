@@ -59,11 +59,11 @@ ul {
 /*########################### Start style navbar ##########################*/
 
 .navbar {
-    border-bottom: 2px solid #eee
+    border-bottom: 2px solid var(--main-color)
 }
 
 .navbar .navbar-brand img {
-    width: 80px;
+    height: 60px;
 }
 
 .navbar .navbar-toggler {
@@ -137,4 +137,5 @@ ul {
         border-top: 1px solid #eee
     }
 }
+
 /*########################### Start style navbar ##########################*/
