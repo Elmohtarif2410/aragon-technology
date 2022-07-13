@@ -216,7 +216,6 @@
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
     position: relative;
-    /* background-color: var(--back-color); */
 }
 
 .services::before {
@@ -287,4 +286,88 @@
     }
 }
 
-/************************* Start Style Services ************************/
+/************************* End Style Services ************************/
+
+/************************* Start style Testimonials ************************/
+
+.testimonials {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.testimonials .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 35px
+}
+
+.testimonials .cards .monial {
+    /* background-color: #0b093b; */
+    background-color: #2196f3;
+    padding: 25px;
+    color: white;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    position: relative;
+    transition: var(--main-transition);
+    cursor: pointer
+}
+
+.testimonials .cards .monial:hover {
+    box-shadow: 0 0 12px rgb(0 0 0 / .4);
+    transform: scale(1.01);
+}
+
+/* .testimonials .cards .monial::before,
+.testimonials .cards .monial::after {
+    content: "";
+    width: 12px;
+    height: 52px;
+    background-color: #ffc107;
+    position: absolute;
+    top: 0;
+    transform: translate(-50%, -60%) rotate(7deg) skewX(5deg);
+}
+
+.testimonials .cards .monial::before {
+    left: calc(50% - 10px)
+}
+
+.testimonials .cards .monial::after {
+    left: calc(50% + 10px)
+} */
+
+.testimonials .monial .info {
+    width: calc(70% - 25px)
+}
+
+.testimonials .monial .info p {
+    font-size: 14px;
+}
+
+.testimonials .monial .info .rate svg {
+    color: #ffc107
+}
+
+.testimonials .monial .image {
+    width: 30%
+}
+
+.testimonials .monial .image img {
+    max-width: 100%
+}
+
+
+
+
+
+
+@media (max-width: 575px) { 
+    .testimonials .cards {
+        grid-template-columns: auto;
+    }
+}
+
+/************************* End Style Testimonials ************************/
