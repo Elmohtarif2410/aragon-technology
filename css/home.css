@@ -252,8 +252,17 @@
 
 .services .card h3 {
     font-size: 22px;
-    color: var(--heading-color);
+    color: var(--main-color);
     margin-bottom: 15px;
+}
+
+.services .card ul li {
+    color: var(--text-color);
+    transition: var(--main-transition);
+}
+
+.services .card ul li:hover {
+    color: var(--secound-color)
 }
 
 .services .card .info {
