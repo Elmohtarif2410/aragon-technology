@@ -309,6 +309,7 @@
     border-radius: 12px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     gap: 25px;
     position: relative;
     transition: var(--main-transition);
@@ -320,6 +321,7 @@
     transform: scale(1.01);
 }
 
+/* not found color */
 /* .testimonials .cards .monial::before,
 .testimonials .cards .monial::after {
     content: "";
@@ -359,11 +361,7 @@
     max-width: 100%
 }
 
-
-
-
-
-
+/* Media Query */
 @media (max-width: 575px) { 
     .testimonials .cards {
         grid-template-columns: auto;
@@ -371,3 +369,83 @@
 }
 
 /************************* End Style Testimonials ************************/
+
+/************************* Start Style contact us ************************/
+
+.contact {
+    margin-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+    background-color: var(--back-color);
+    position: relative;
+}
+
+.contact img.curve {
+    width: 100%;
+    height: var(--main-padding);
+    position: absolute;
+    top: 0;
+    transform: translateY(-100%)
+}
+
+.contact .info section {
+    margin-bottom: 10px;
+}
+
+.contact .info section h5 {
+    font-size: 28px;
+    color: var(--heading-color)
+}
+
+.contact .info section p {
+    font-size: 22px;
+}
+
+.contact .info section a {
+    text-decoration: none;
+    font-size: 22px;
+    color: var(--main-color)
+}
+
+.contact .info section a:hover {
+    color: var(--secound-color)
+}
+
+.contact .info section.social {
+    margin-top: 25px;
+}
+
+.contact .info .social ul li a {
+    display: block;
+    padding: 10px 15px;
+    background-color: var(--secound-color);
+    color: white;
+    border-radius: 7px;
+    margin: 10px 5px;
+    transition: var(--main-transition);
+}
+
+.contact .info .social ul li a:hover {
+    background-color: var(--main-color);
+    color: #f7f7f7
+}
+
+.contact .image img {
+    animation: top-down 1s linear infinite alternate;
+
+}
+
+.contact .main-button {
+    margin: auto;
+    display: block;
+    width: fit-content;
+    margin-top: 25px
+}
+
+
+/* Animation */
+@keyframes top-down {
+    to {
+        transform: translateY(-20px);
+    }
+}
+/************************* End Style contact us ************************/
