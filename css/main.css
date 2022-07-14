@@ -31,7 +31,6 @@ html {
 
 body {
     font-family: "Tajawal", sans-serif, Tahoma, Geneva, Verdana;
-    height: 10000px;
 }
 
 button {
@@ -145,4 +144,154 @@ p {
     }
 }
 
-/*########################### Start style navbar ##########################*/
+/*########################### End style navbar ##########################*/
+
+
+/*########################### Start style Footer ##########################*/
+
+body > footer {
+    padding-top: var(--main-padding);
+    background-color: #191919;
+}
+
+body > footer .container {
+    padding-bottom: calc(var(--main-padding) / 2);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 50px 30px;
+}
+
+body > footer .info img {
+    max-width: 100%;
+    width: 100px
+}
+
+body > footer .info .icon {
+    margin: 20px 0;
+    display: flex;
+    gap: 15px;
+}
+
+body > footer .info .icon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #313131;
+    width: 50px;
+    height: 50px;
+    border-radius: 7px;
+    font-size: 26px;
+    transition: var(--main-transition);
+    color: #b9b9b9
+}
+
+body > footer .info .icon a:hover {color: white}
+
+body > footer .info .icon a:first-of-type:hover {background-color: #1877f2}
+
+body > footer .info .icon a:nth-of-type(2):hover {background-color: #0077b5}
+
+body > footer .info .icon a:last-of-type:hover {background-color: #1da1f2}
+
+body > footer .links ul {
+    padding: 0;
+}
+
+body > footer .links h3 {
+    color: white;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+body > footer .links li:not(:last-of-type) {
+    border-bottom: 2px solid #313131;
+}
+
+body > footer .links a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 15px 0;
+    position: relative;
+    transition: var(--main-transition);
+}
+
+body > footer .links a:hover {
+    transform: translateX(-15px);
+    color: white
+}
+
+body > footer .links a::before {
+    content: "\F100";
+    font-family: "Font Awesome 5 Free";
+    font-weight: bold;
+    margin-left: 8px;
+    color: var(--main-color)
+}
+
+body > footer .links a:hover::before {
+    color: var(--secound-color)
+}
+
+body > footer .address article {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+body > footer .address svg {
+    font-size: 28px;
+    margin-left: 15px;
+    color: var(--main-color)
+}
+
+body > footer .address p {
+    margin-bottom: 0;
+}
+
+/* foorer copy right */
+body > footer .copy-right {
+    padding: calc(var(--main-padding) / 2) 15px;
+    text-align: center;
+    text-transform: capitalize;
+    border-top: 3px solid #313131;
+    line-height: 1.6;
+    font-size: 20px;
+}
+
+body > footer .copy-right a:first-of-type {
+    color: var(--secound-color)
+}
+
+body > footer .copy-right a {
+    text-decoration: none;
+    color: #f9f9f9;
+    transition: var(--main-transition);
+}
+
+body > footer .copy-right a:hover {color: var(--main-color)}
+
+/* Media Query */
+@media (max-width: 767px) {
+    body > footer .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    body > footer .info .icon {
+        justify-content: center;
+    }
+
+    body > footer .links a {
+        min-width: 250px;
+    }
+
+    body > footer .address article {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
+
+/*########################### End style Footer ##########################*/
