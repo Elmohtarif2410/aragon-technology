@@ -49,6 +49,10 @@ p {
     line-height: 1.7;
     color: var(--text-color)
 }
+
+a {
+    text-decoration: none;
+}
 /********************** End Style Global Rouls ***********************/
 
 /********************** Start Style compotant ***********************/
@@ -163,7 +167,7 @@ body > footer .container {
 
 body > footer .info img {
     max-width: 100%;
-    width: 100px
+    height: 60px;
 }
 
 body > footer .info .icon {
@@ -208,7 +212,6 @@ body > footer .links li:not(:last-of-type) {
 }
 
 body > footer .links a {
-    text-decoration: none;
     color: inherit;
     display: block;
     padding: 15px 0;
@@ -264,7 +267,6 @@ body > footer .copy-right a:first-of-type {
 }
 
 body > footer .copy-right a {
-    text-decoration: none;
     color: #f9f9f9;
     transition: var(--main-transition);
 }
