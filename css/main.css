@@ -57,7 +57,29 @@ a {
 
 /********************** Start Style compotant ***********************/
 
+.scroll-top {
+    position: fixed;
+    right: 30px;
+    bottom: 50px;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    transition: var(--main-transition);
+    cursor: pointer;
+    display: none;
+}
 
+.scroll-top:hover {
+    color: var(--back-color);
+    background-color: var(--secound-color);
+    transform: rotate(360deg);
+}
 
 /********************** End Style compotant ***********************/
 
