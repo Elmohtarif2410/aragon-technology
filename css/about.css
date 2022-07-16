@@ -1,0 +1,70 @@
+/* Variable */
+:root {
+    --main-color: #2196f3;
+    --secound-color: #00bcd4;
+    --back-color: #fbfdfe;
+    --main-padding: 80px;
+    --main-transition: .4s;
+    --text-color: #777;
+    --heading-color: #586567;
+    --main-gap: 40px
+}
+
+/************************* Start Style About Us ************************/
+
+.about-us {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.about-us .row {
+    text-align: center;
+}
+
+.about-us .row .fetur {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 25px;
+}
+
+.about-us .row .fetur .icon {
+    padding: 15px;
+    color: white;
+    background-color: var(--main-color);
+    margin: 0 15px 15px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--main-transition);
+
+}
+
+.about-us .row .fetur .icon:hover {
+    background-color: var(--secound-color);
+    color: var(--back-color)
+}
+
+.about-us .row .fetur .icon svg {
+    width: 35px;
+    height: 35px;
+}
+
+/* Media Queiry */
+@media (max-width: 991px) {
+
+    .about-us .row .fetur {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us .row .fetur .icon {
+        order: -1;
+    }
+}
+
+@media (max-width: 767px) {
+    .about-us .image {
+        display: none;
+    }
+}
