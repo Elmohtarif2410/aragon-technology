@@ -111,6 +111,8 @@ a {
     transform: translate(-50%, 50%) rotate(45deg);
 }
 
+.main-heading p {max-width: 500px; margin: auto;}
+
 .scroll-top {
     position: fixed;
     right: 30px;
