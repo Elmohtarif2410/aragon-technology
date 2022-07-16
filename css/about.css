@@ -68,3 +68,34 @@
         display: none;
     }
 }
+
+/************************* End Style About Us ************************/
+
+/************************* Start Style question ************************/
+
+.question {
+    padding-top: var(--main-padding);
+    padding-bottom: var(--main-padding);
+}
+
+.question .accordion {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    transition: var(--main-transition)
+}
+
+.question .accordion:hover {
+    box-shadow: 0 5px 12px rgba(0, 0, 0, .3);
+}
+
+.question .accordion button {
+    background-color: var(--back-color);
+    color: var(--text-color)
+}
+
+.question .accordion button::after {
+    color: var(--text-color);
+    margin-right: auto;
+    margin-left: 0;
+}
+
+/************************* End Style question ************************/

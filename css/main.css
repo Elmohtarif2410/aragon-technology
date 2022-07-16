@@ -98,7 +98,8 @@ a {
     transform: translateX(-50%);
 }
 
-.main-heading h2::after {
+.main-heading h2::after,
+.main-heading h1::after {
     content: "";
     width: 12px;
     height: 12px;
