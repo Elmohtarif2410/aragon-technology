@@ -31,6 +31,7 @@ html {
 
 body {
     font-family: "Tajawal", sans-serif, Tahoma, Geneva, Verdana;
+    overflow-x: hidden;
 }
 
 button {
@@ -77,6 +78,8 @@ a {
 .main-heading {
     text-align: center;
     margin-bottom: var(--main-padding);
+    animation: bounceIn 1s;
+    animation-play-state: paused;
 }
 
 .main-heading h2,
@@ -375,3 +378,157 @@ body > footer .copy-right a:hover {color: var(--main-color)}
 }
 
 /*########################### End style Footer ##########################*/
+
+
+/*######################### Start Anmation key frams #####################*/
+
+@keyframes backInUp {
+    0% {
+        -webkit-transform: translateY(1200px) scale(0.7);
+        transform: translateY(1200px) scale(0.7);
+        opacity: 0.7;
+    }
+  
+    80% {
+        -webkit-transform: translateY(0px) scale(0.7);
+        transform: translateY(0px) scale(0.7);
+        opacity: 0.7;
+    }
+  
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes backInDown {
+    0% {
+        -webkit-transform: translateY(-1200px) scale(0.7);
+        transform: translateY(-1200px) scale(0.7);
+        opacity: 0.7;
+    }
+  
+    80% {
+        -webkit-transform: translateY(0px) scale(0.7);
+        transform: translateY(0px) scale(0.7);
+        opacity: 0.7;
+    }
+  
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes backInLeft {
+    0% {
+        -webkit-transform: translateX(-2000px) scale(0.7);
+        transform: translateX(-2000px) scale(0.7);
+        opacity: 0.7;
+    }
+  
+    80% {
+        -webkit-transform: translateX(0px) scale(0.7);
+        transform: translateX(0px) scale(0.7);
+        opacity: 0.7;
+    }
+  
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes backInRight {
+    0% {
+        -webkit-transform: translateX(2000px) scale(0.7);
+        transform: translateX(2000px) scale(0.7);
+        opacity: 0.7;
+    }
+  
+    80% {
+        -webkit-transform: translateX(0px) scale(0.7);
+        transform: translateX(0px) scale(0.7);
+        opacity: 0.7;
+    }
+  
+    100% {
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+        -webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+        animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(0.3, 0.3, 0.3);
+        transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    20% {
+        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+        transform: scale3d(1.1, 1.1, 1.1);
+    }
+  
+    40% {
+        -webkit-transform: scale3d(0.9, 0.9, 0.9);
+        transform: scale3d(0.9, 0.9, 0.9);
+    }
+  
+    60% {
+        opacity: 1;
+        -webkit-transform: scale3d(1.03, 1.03, 1.03);
+        transform: scale3d(1.03, 1.03, 1.03);
+    }
+  
+    80% {
+        -webkit-transform: scale3d(0.97, 0.97, 0.97);
+        transform: scale3d(0.97, 0.97, 0.97);
+    }
+  
+    to {
+        opacity: 1;
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.running {
+    animation-play-state: running;
+}
+
+.backIn-up {
+    animation: backInUp 1s;
+}
+
+.backIn-down {
+    animation: backInDown 1s;
+}
+
+.backIn-left {
+    animation: backInLeft 1s;
+}
+
+.backIn-right {
+    animation: backInRight 1s;
+}
+
+.anmation {
+    animation-play-state: paused;
+}
+
+/*######################### End Anmation key frams #######################*/

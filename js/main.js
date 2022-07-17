@@ -6,6 +6,51 @@
 */
 
 /********************************************************
+################## Animation action #####################
+********************************************************/
+
+/******************* Main heading animation ********************/
+
+// Reset Varible
+let mainHeadingElementsAll = document.querySelectorAll(".main-heading");
+let elementsAnmationScrollAll = document.querySelectorAll(".anmation")
+// Extra vertical space so that the animation appears well
+let addHeightOffset = 100;
+
+// actions is happening when window scrolling
+window.addEventListener("scroll", () => {
+    // Dimensions for window
+    let windowScrollY = window.scrollY;
+    let windowInnerHeight = window.innerHeight;
+
+    // main heading Anmaition
+    mainHeadingElementsAll.forEach((heading) => {
+        // Dimensions for Element
+        let headingOffsetTop = heading.offsetTop;
+        let headingOffsetHeight = heading.offsetHeight;
+        // When the item is reached, the animation occurs
+        if (windowScrollY > (headingOffsetTop + headingOffsetHeight - windowInnerHeight + addHeightOffset)) {
+            heading.style.animationPlayState = "running";
+        }
+    })    
+
+    // All Elements Anmation
+    elementsAnmationScrollAll.forEach((element) => {
+        // Dimensions for Element
+        let elementOffsetTop = element.offsetTop;
+        let elementOffsetHeight = element.offsetHeight;
+        // When the item is reached, the animation occurs
+        if (windowScrollY > (elementOffsetTop + elementOffsetHeight - windowInnerHeight + addHeightOffset)) {
+            element.style.animationPlayState = "running";
+        }
+    })  
+});
+
+
+
+
+
+/********************************************************
 ################## Home page script #####################
 ********************************************************/
 
@@ -43,6 +88,16 @@ scrollToTopButton.onclick =  _ => {
         behavior: "smooth",
     })
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
