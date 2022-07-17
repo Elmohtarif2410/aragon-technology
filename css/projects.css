@@ -1,0 +1,19 @@
+/* Variable */
+:root {
+    --main-color: #2196f3;
+    --secound-color: #00bcd4;
+    --back-color: #fbfdfe;
+    --main-padding: 80px;
+    --main-transition: .4s;
+    --text-color: #777;
+    --heading-color: #586567;
+    --main-gap: 40px
+}
+
+/*********************** Start Style main header **********************/
+
+body > header {
+    padding-top: var(--main-padding);
+}
+
+/*********************** End Style main header ************************/
