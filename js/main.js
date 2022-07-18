@@ -131,6 +131,35 @@ scrollToTopButton.onclick =  _ => {
     })
 }
 
+/********************************************************
+################# contact page script ###################
+********************************************************/
+
+/**************** Functionalty of contact form  *****************/
+
+// creat alert to form not work with javascript
+let alertMassegeElement = document.createElement("span");
+
+// add text on alert
+alertMassegeElement.textContent = "عفواً! حدث خطأ ما، يرجى المحاولة لاحقاً";
+
+// Style Alert Massege Element
+alertMassegeElement.classList.add("alert", "alert-danger", "w-100", "text-center", "d-block")
+
+// When you register correctly in the form, the message appears
+formContactUs.onsubmit = function (e) {
+    // prevent Default form becouse not work
+    e.preventDefault();
+    // when on click to contact buttom => add alert in last form
+    this.appendChild(alertMassegeElement);
+    // aftrer 7 secound => delet alert 
+    setTimeout(function () {
+        // deleted alert
+        alertMassegeElement.remove();
+    }, 7000)
+}
+
+
 
 
 

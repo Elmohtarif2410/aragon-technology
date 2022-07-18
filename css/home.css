@@ -1,24 +1,3 @@
-/* Variable */
-:root {
-    --main-color: #2196f3;
-    --secound-color: #00bcd4;
-    --back-color: #fbfdfe;
-    --main-padding: 80px;
-    --main-transition: .4s;
-    --text-color: #777;
-    --heading-color: #586567;
-    --main-gap: 40px
-}
-
-
-body {
-    overflow: hidden;
-}
-
-/* componant  */
-
-
-
 /************************* Start Style Landding ************************/
 
 .landding {
@@ -112,6 +91,10 @@ body {
     .landding .carousel .carousel-caption h2 {font-size: 2rem}
 
     .landding .carousel .carousel-caption p {font-size: 1rem}
+
+    .landding .slide > button {
+        display: none;
+    }
 
 }
 
@@ -258,8 +241,7 @@ body {
 }
 
 .testimonials .cards .monial {
-    /* background-color: #0b093b; */
-    background-color: #2196f3;
+    background-color: var(--secound-color);
     padding: 25px;
     color: white;
     border-radius: 12px;
@@ -275,10 +257,10 @@ body {
 .testimonials .cards .monial:hover {
     box-shadow: 0 0 12px rgb(0 0 0 / .4);
     transform: scale(1.01);
+    background-color: var(--main-color);
 }
 
-/* not found color */
-/* .testimonials .cards .monial::before,
+.testimonials .cards .monial::before,
 .testimonials .cards .monial::after {
     content: "";
     width: 12px;
@@ -295,7 +277,7 @@ body {
 
 .testimonials .cards .monial::after {
     left: calc(50% + 10px)
-} */
+}
 
 .testimonials .monial .info {
     width: calc(70% - 25px)
@@ -397,11 +379,11 @@ body {
     margin-top: 25px
 }
 
-
 /* Animation */
 @keyframes top-down {
     to {
         transform: translateY(-20px);
     }
 }
+
 /************************* End Style contact us ************************/

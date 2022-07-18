@@ -20,7 +20,7 @@ html {
 
 :root {
     --main-color: #2196f3;
-    --secound-color: #00bcd4;
+    --secound-color: #003070;
     --back-color: #fbfdfe;
     --main-padding: 80px;
     --main-transition: .4s;
@@ -32,6 +32,7 @@ html {
 body {
     font-family: "Tajawal", sans-serif, Tahoma, Geneva, Verdana;
     overflow-x: hidden;
+    overflow: hidden;
 }
 
 button {
@@ -453,7 +454,7 @@ body > footer .copy-right {
 }
 
 body > footer .copy-right a:first-of-type {
-    color: var(--secound-color)
+    color: var(--main-color)
 }
 
 body > footer .copy-right a {
@@ -461,7 +462,7 @@ body > footer .copy-right a {
     transition: var(--main-transition);
 }
 
-body > footer .copy-right a:hover {color: var(--main-color)}
+body > footer .copy-right a:hover {color: var(--secound-color)}
 
 /* Media Query */
 @media (max-width: 767px) {
