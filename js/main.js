@@ -48,6 +48,48 @@ window.addEventListener("scroll", () => {
 
 
 
+/********************************************************
+############### Loading page anmation ###################
+********************************************************/
+
+window.addEventListener("load", () => {
+    sessionStorage.setItem("loaded", "true")
+})
+
+// If you open the site for the first time, the animation will appear
+if (sessionStorage.getItem("loaded") === "true") {
+    // remove loading anmation from page
+    loading.remove();
+    // Return body to the default overflow
+    document.body.style.overflow = "auto";
+    
+} else {
+
+    // when window faly loaded
+    window.addEventListener("load", () => {
+
+        //At least the animation stays for 1 second
+        setTimeout(() => {
+
+            // The invisibility effect works beautifully
+            loading.style.opacity = "0";
+
+            setTimeout(() => {
+
+                // remove loading anmation from page after 1 secound
+                loading.remove();
+
+            }, 1000);
+
+            // Return body to the default overflow
+            document.body.style.overflow = "auto";
+
+        }, 1000)    
+    });
+
+}
+
+
 
 
 /********************************************************

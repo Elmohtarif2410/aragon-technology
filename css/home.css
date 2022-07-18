@@ -10,6 +10,11 @@
     --main-gap: 40px
 }
 
+
+body {
+    overflow: hidden;
+}
+
 /* componant  */
 
 
