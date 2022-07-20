@@ -99,15 +99,7 @@ if (sessionStorage.getItem("loaded") === "true") {
 /******************* Buttons Actions ********************/
 
 // Reset Varible
-let landdingButtonMore = document.querySelectorAll(".landding .carousel-item button");
 let scrollToTopButton = document.getElementById("scroll_to_top");
-
-// button learn more to landding section
-landdingButtonMore.forEach((button) => {
-    button.onclick = _ => {
-        window.location.href = "/projects"
-    }
-})
 
 // Show and hide button when windwo on scroll
 window.addEventListener("scroll", () => {
@@ -146,17 +138,37 @@ alertMassegeElement.textContent = "عفواً! حدث خطأ ما، يرجى ا�
 // Style Alert Massege Element
 alertMassegeElement.classList.add("alert", "alert-danger", "w-100", "text-center", "d-block")
 
-// When you register correctly in the form, the message appears
+// When you register correctly in the form
 formContactUs.onsubmit = function (e) {
     // prevent Default form becouse not work
     e.preventDefault();
-    // when on click to contact buttom => add alert in last form
-    this.appendChild(alertMassegeElement);
-    // aftrer 7 secound => delet alert 
-    setTimeout(function () {
-        // deleted alert
-        alertMassegeElement.remove();
-    }, 7000)
+    // when on click to contact buttom => create link => open your email
+    // create link
+    let mailElement = document.createElement("a");
+    // massege link 
+    let mailInformation = `
+        mailto:aragontechno@gmail.com?subject=${form_subject.value} from: ${form_name.value}&body=me email: ${form_email.value}
+        ${form_massge.value}
+    `;
+
+    // lik attribute
+    mailElement.setAttribute("href", mailInformation);
+    mailElement.setAttribute("target", "_blank")
+
+    // add link to page
+    document.body.appendChild(mailElement);
+
+    // action link
+    mailElement.click();
+
+    // remove link to page
+    mailElement.remove();
+
+    // restet inputs values
+    form_name.value = "";
+    form_email.value = "";
+    form_subject.value = "";
+    form_massge.value = "";
 }
 
 

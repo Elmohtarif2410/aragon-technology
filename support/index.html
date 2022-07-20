@@ -121,7 +121,7 @@
               <div class="icon">
                 <i class="fa-solid fa-phone"></i>
               </div>
-              <p>
+              <p style="direction: ltr">
                 +20 123 4567 789<br/>
                 +20 987 765 432
               </p>
@@ -144,7 +144,7 @@
               </article>
               <article class="whats">
                 <h4>تواصل معنا عبر والوتساب</h4>
-                <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://wa.me/+201501183010" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
               </article>
             </div>
           </div>
@@ -160,13 +160,14 @@
           <h2>اترك لنا رسالة</h2>
           <p>القراءة والمطالعة من أهم العادات التي تطور الشخصية وتنمي المعرفة والثقافة، ينبغي على أي أنسان أن يطور من ذاته ويرتقي بأخلاقه</p>
         </div>
+        <!-- php code youer form -->
         <form  action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" id="formContactUs">
           <div class="d-md-flex">
             <input type="text" name="name" id="form_name" placeholder="الاسم" class="ms-md-2" required>
             <input type="email" name="email" id="form_email" placeholder="البريد الإلكتروني" class="me-md-2" required>
           </div>
           <input type="text" name="subject" id="form_subject" placeholder="عنوان الرسالة">
-          <textarea name="massge" id="form-massge" placeholder="اكتب رسالتك ..." required></textarea>
+          <textarea name="massge" id="form_massge" placeholder="اكتب رسالتك ..." required></textarea>
           <input type="submit" value="إرسال">
         </form>
       </div>
@@ -247,7 +248,7 @@
         </section>
       </div>
       <div class="copy-right">
-        جميع الحقوق محفوظة &copy; 2022 <a href="../">شركة Aragon Technology</a> صنع بواسطة <a href="https://elmohtarif2410.github.io/My-portofolio/">أحمد المحترف</a>
+        جميع الحقوق محفوظة &copy; 2022 <a href="#home">لشركة Aragon Techno</a> تم التصميم بواسطة تيم البرمجة بالشركة 
       </div>
     </footer>
     <!-- End footer section -->

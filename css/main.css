@@ -448,6 +448,11 @@ body > footer .address p {
     margin-bottom: 0;
 }
 
+body > footer .address p:last-of-type {
+    direction: ltr;
+    text-align: right;
+}
+
 /* foorer copy right */
 body > footer .copy-right {
     padding: calc(var(--main-padding) / 3) 15px;

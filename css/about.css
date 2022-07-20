@@ -4,6 +4,7 @@
     padding-top: var(--main-padding);
     padding-bottom: var(--main-padding);
     position: relative;
+    overflow-x: hidden;
 }
 
 .about-us::before {

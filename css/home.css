@@ -347,7 +347,8 @@
 .contact .info section a {
     text-decoration: none;
     font-size: 22px;
-    color: var(--main-color)
+    color: var(--main-color);
+    direction: ltr;
 }
 
 .contact .info section a:hover {
