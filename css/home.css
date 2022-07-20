@@ -252,7 +252,7 @@
     position: relative;
     transition: var(--main-transition);
     cursor: pointer;
-    box-shadow: 0 0 10px;
+    border: 3px solid var(--main-color)
 }
 
 .testimonials .cards .monial:hover {
@@ -361,15 +361,25 @@
 .contact .info .social ul li a {
     display: block;
     padding: 10px 15px;
-    background-color: var(--secound-color);
+    background-color: var(--main-color);
     color: white;
     border-radius: 7px;
     margin: 10px 5px;
     transition: var(--main-transition);
 }
 
+.contact .info .social ul li a[href*="facebook"] {background-color: #1877f2}
+
+.contact .info .social ul li a[href*="instagram"] {background-color: #5851db}
+
+.contact .info .social ul li a[href*="twitter"] {background-color: #1da1f2}
+
+.contact .info .social ul li a[href*="linkedin"] {background-color: #0077b5}
+
+.contact .info .social ul li a[href*="youtube"] {background-color: #ff0000}
+
 .contact .info .social ul li a:hover {
-    background-color: var(--main-color);
+    background-color: var(--secound-color);
     color: #f7f7f7
 }
 

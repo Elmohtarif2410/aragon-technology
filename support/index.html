@@ -4,6 +4,31 @@
     website : https://elmohtarif2410.github.io/My-portofolio
     deat finsh : it's not finsh
 --> 
+
+<!-- PHP Code -->
+
+<?php 
+
+  if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+    // set Varible and filtering varible
+    $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $phone = filter_var($_POST['phone'], FILTER_SANITIZE_NUMBER_INT);
+    $subject = filter_var($_POST['subject'], FILTER_SANITIZE_STRING);
+    $massge = filter_var($_POST['massge'], FILTER_SANITIZE_STRING);
+
+    $website_Email = 'ahkaah2410@gmail.com';
+    $headers = 'from' . $name . '\r\n' . "phone" . $phone . '\r\n' . "email" . $email . '\r\n';
+
+    // php mail sent
+    mail($website_Email, $subject, $massge, $headers);
+
+  }
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
   <head>
@@ -110,9 +135,11 @@
               <article>
                 <h4>حسابتنا على مواقع التواصل</h4>
                 <ul class="icon p-1 m-0 d-flex justify-content-center">
-                  <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-                  <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-                  <li><a href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                  <li><a href="http://facebook.com/aragontechno" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+                  <li><a href="https://www.instagram.com/aragontechno/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="https://www.twitter.com/aragontechno" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+                  <li><a href="http://linkedin.com/company/aragontechno" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                  <li><a href="https://youtube.com/channel/UC5RERsOxfYnJgCMaQnv2viQ" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
               </article>
               <article class="whats">
@@ -133,7 +160,7 @@
           <h2>اترك لنا رسالة</h2>
           <p>القراءة والمطالعة من أهم العادات التي تطور الشخصية وتنمي المعرفة والثقافة، ينبغي على أي أنسان أن يطور من ذاته ويرتقي بأخلاقه</p>
         </div>
-        <form action="" method="post" id="formContactUs">
+        <form  action="<?php echo $_SERVER['PHP_SELF'] ?>" method="POST" id="formContactUs">
           <div class="d-md-flex">
             <input type="text" name="name" id="form_name" placeholder="الاسم" class="ms-md-2" required>
             <input type="email" name="email" id="form_email" placeholder="البريد الإلكتروني" class="me-md-2" required>
@@ -147,7 +174,7 @@
     <!-- End form section -->
 
     <!-- Start Google map section -->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d54655.777017552304!2d30.87254444930477!3d31.110119379737093!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14f7ab78f233021f%3A0xc2cdebb004a208f8!2sKafr%20El-Shaikh%2C%20Qism%20Kafr%20El-Shaikh%2C%20Kafr%20el-Sheikh%2C%20Gharbia%20Governorate!5e0!3m2!1sen!2seg!4v1657989418372!5m2!1sen!2seg"style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d852.5537090812804!2d30.784200170815236!3d31.27015214512258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x9cedfd461600cfb8!2zMzHCsDE2JzEyLjUiTiAzMMKwNDcnMDEuMiJF!5e0!3m2!1sar!2seg!4v1658305882657!5m2!1sar!2seg" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <!-- End Google map section -->
 
     <!-- Start footer section -->
@@ -155,11 +182,13 @@
       <div class="container">
         <section class="info">
           <img src="../images/logo.png" alt="logo footer">
-          <div class="icon">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-          </div>
+          <ul class="icon p-0">
+            <li><a href="http://facebook.com/aragontechno" target="_blank"><i class="fa-brands fa-facebook-f"></i></a></li>
+            <li><a href="https://www.instagram.com/aragontechno/" target="_blank"><i class="fa-brands fa-instagram"></i></a></li>
+            <li><a href="https://www.twitter.com/aragontechno" target="_blank"><i class="fa-brands fa-twitter"></i></a></li>
+            <li><a href="http://linkedin.com/company/aragontechno" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            <li><a href="https://youtube.com/channel/UC5RERsOxfYnJgCMaQnv2viQ" target="_blank"><i class="fa-brands fa-youtube"></i></a></li>
+          </ul>
           <p>القراءة والمطالعة من أهم العادات التي تطور الشخصية وتنمي المعرفة والثقافة، ينبغي على أي أنسان أن يطور من ذاته ويرتقي بأخلاقه</p>
         </section>
         <section class="links">

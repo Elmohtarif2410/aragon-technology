@@ -67,9 +67,21 @@
     transition: var(--main-transition);
 }
 
+.contact-us .row .content ul.icon li a[href*="facebook"] {background-color: #1877f2}
+
+.contact-us .row .content ul.icon li a[href*="instagram"] {background-color: #5851db}
+
+.contact-us .row .content ul.icon li a[href*="twitter"] {background-color: #1da1f2}
+
+.contact-us .row .content ul.icon li a[href*="linkedin"] {background-color: #0077b5}
+
+.contact-us .row .content ul.icon li a[href*="youtube"] {background-color: #ff0000}
+
+
 .contact-us .row .content ul.icon li a:hover {
     background-color: var(--secound-color);
-    color: #f7f7f7
+    color: #f7f7f7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
 }
 
 .contact-us .row .content .whats svg {
