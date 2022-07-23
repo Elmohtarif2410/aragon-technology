@@ -16,7 +16,7 @@
     top: -20%;
     left: 0;
     z-index: -1;
-    transform: skewY(4deg);
+    /* transform: skewY(4deg); */
 }
 
 .about-us .row {
@@ -50,6 +50,12 @@
 .about-us .row .fetur .icon svg {
     width: 35px;
     height: 35px;
+}
+
+.about-us .row .fetur .special {
+    font-size: 12px;
+    color: var(--main-color);
+    text-align: left;
 }
 
 /* Media Queiry */
