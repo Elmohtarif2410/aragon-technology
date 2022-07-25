@@ -263,8 +263,23 @@ a {
     border-bottom: 2px solid var(--main-color)
 }
 
+.navbar .navbar-brand {
+    position: relative;
+}
+
+.navbar .navbar-brand::before {
+    content: "سجل تجاري 39542 رقم ضريبي 643-282-203";
+    font-size: 12px;
+    color: #999;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    transform: translateX(-100%);
+}
+
 .navbar .navbar-brand img {
     max-height: 60px;
+    
 }
 
 .navbar .navbar-toggler {
@@ -325,6 +340,9 @@ a {
         border: none;
     }
 
+    .navbar .navbar-brand::before {
+        display: none;
+    }
     .navbar .navbar-nav {
         margin-top: 25px
     }

@@ -336,17 +336,12 @@
 }
 
 .contact .info section h5 {
-    font-size: 28px;
     color: var(--heading-color)
 }
 
-.contact .info section p {
-    font-size: 22px;
-}
 
 .contact .info section a {
     text-decoration: none;
-    font-size: 22px;
     color: var(--main-color);
     direction: ltr;
 }
@@ -404,3 +399,14 @@
 }
 
 /************************* End Style contact us ************************/
+
+
+/************************* Start Style google map ************************/
+
+iframe {
+    width: 100%;
+    height: 250px;
+    margin-bottom: -7px;
+}
+
+/************************* End Style google map ************************/

@@ -11,6 +11,10 @@ body > header {
     position: relative;
 }
 
+.product:not(:last-of-type) {
+    margin-bottom: var(--main-padding);
+}
+
 .product .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -122,6 +126,11 @@ body > header {
 
 /* Media Query */
 @media (max-width: 991px) {
+
+    .product:not(:last-of-type) {
+        margin-bottom: 0
+    }
+
     .product .container {
         grid-template-columns: none;
         gap: 0
